@@ -1,7 +1,7 @@
 # Cybersecurity Lab Environment Setup
 
 ## Project Overview
-Setting up a cyber lab isn't about throwing tools at a system and seeing what breaks; it's about building a controlled, isolated testing ground where you actually know what's happening on the wire. 
+Setting up a cyber lab and learning what breaks and building a controlled, isolated testing ground where you actually know what's happening on the wire. 
 
 This project documents the deployment of an isolated virtual lab environment tailored for penetration testing, network analysis, and ethical hacking practice. Configured on a dedicated private virtual network, the setup isolates testing traffic from host infrastructure while leaving immediate room to spin up victim targets (like Metasploitable or custom vulnerable servers) down the line.
 
