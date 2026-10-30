@@ -137,8 +137,6 @@ The environment was validated using standard network diagnostic commands inside 
 ---
 
 ## Author & Project Info
-<img width="1360" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/71cc76d1-5b32-4e19-abf2-01a9d2f4ba4a" />
-<img width="1360" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/fc253ab3-1d86-4bd3-a4e9-0d539e52277c" />
 
 * **Author:** Junior SOC / Cybersecurity Trainee
 * **Program:** NetworkWalks Cybersecurity Internship
