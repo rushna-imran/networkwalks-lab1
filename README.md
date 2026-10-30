@@ -1,4 +1,3 @@
-<img width="1360" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/a9b28553-9eeb-4937-aa2d-3a1d7abb5e18" />
 ## Project Overview
 Setting up a cyber lab isn't about throwing tools at a system and seeing what breaks; it's about building a controlled, isolated testing ground where you actually know what's happening on the wire. 
 
