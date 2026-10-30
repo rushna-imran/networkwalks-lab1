@@ -1,3 +1,4 @@
+<img width="1360" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/a9b28553-9eeb-4937-aa2d-3a1d7abb5e18" />
 ## Project Overview
 Setting up a cyber lab isn't about throwing tools at a system and seeing what breaks; it's about building a controlled, isolated testing ground where you actually know what's happening on the wire. 
 
@@ -76,6 +77,7 @@ This lab provides a safe sandbox for hands-on cybersecurity learning and testing
 1. Installed Oracle VirtualBox 7.2 on the Windows 11 host.
 2. Navigated to Tools -> Network -> NAT Networks.
 3. Created a new NAT Network named NatNetwork configured to support inter-VM communication and outward internet routing.
+<img width="1360" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/3154aaed-3de7-46f4-b0e4-ee0ef1394b68" />
 
 ### Step 2: Kali Linux Import & Hardware Allocation
 1. Imported the official Kali Linux 2026.2 pre-built virtual appliance.
@@ -84,11 +86,14 @@ This lab provides a safe sandbox for hands-on cybersecurity learning and testing
    - Processors: 2 Cores
    - Graphics RAM: 128 MB
    - Network Adapter: NAT Network (Name: NatNetwork)
+<img width="1280" height="655" alt="VirtualBox_kali-linux-2026 3-virtualbox-amd64_30_10_2026_20_02_41" src="https://github.com/user-attachments/assets/5e05f555-a11e-4482-ba96-35bd970ab110" />
+
 
 ### Step 3: Network Adapter Binding & Internal Settings
 1. Open VM Settings -> Network.
 2. Set Adapter 1 to Attached to: NAT Network.
 3. Selected NatNetwork from the name dropdown and enabled Promiscuous Mode: Allow VMs for future packet sniffing capabilities across target nodes.
+<img width="1360" height="768" alt="Screenshot (9)" src="https://github.com/user-attachments/assets/79a8d8f6-58ec-4c0d-bf86-d6d722917f30" />
 
 ---
 
@@ -103,6 +108,8 @@ The environment was validated using standard network diagnostic commands inside 
 | **Gateway Reachability** | ping -c 4 10.0.2.1 | 4 packets sent, 0% packet loss, instant response | **PASS** |
 | **Internet Routing** | ping -c 4 1.1.1.1 | ICMP replies returned with 0% packet loss | **PASS** |
 | **State Preservation** | VirtualBox UI Snapshot | Snapshot taken & named cyber Lab1 | **PASS** |
+<img width="1280" height="655" alt="VirtualBox_kali-linux-2026 3-virtualbox-amd64_30_10_2026_20_08_46" src="https://github.com/user-attachments/assets/10fe8953-53fe-4007-8b55-7fc41ff891cc" />
+<img width="1280" height="655" alt="VirtualBox_kali-linux-2026 3-virtualbox-amd64_30_10_2026_20_31_40" src="https://github.com/user-attachments/assets/4f0d6b93-e97c-4055-a89a-0a994382a755" />
 
 ---
 
@@ -131,6 +138,8 @@ The environment was validated using standard network diagnostic commands inside 
 ---
 
 ## Author & Project Info
+<img width="1360" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/71cc76d1-5b32-4e19-abf2-01a9d2f4ba4a" />
+<img width="1360" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/fc253ab3-1d86-4bd3-a4e9-0d539e52277c" />
 
 * **Author:** Junior SOC / Cybersecurity Trainee
 * **Program:** NetworkWalks Cybersecurity Internship
