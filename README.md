@@ -62,8 +62,57 @@ This lab provides a safe sandbox for hands-on cybersecurity learning and testing
 ```bash
 # VM Hardware Configuration Parameters
 Base_Memory     = "4096 MB"
-Step 3: Network Adapter Binding & Internal SettingsOpen VM Settings $\rightarrow$ Network.Set Adapter 1 to Attached to: NAT Network.Selected NatNetwork from the name dropdown and enabled Promiscuous Mode: Allow VMs for future packet sniffing capabilities across target nodes.Verification & TestingThe environment was validated using standard network diagnostic commands inside the Kali Linux terminal:Verification TestTerminal CommandExpected / Verified ResultStatusIP Assignmentip aeth0 displays valid IP 10.0.2.15/24PASSRouting Tableip routeDefault route configured via 10.0.2.1PASSGateway Reachabilityping -c 4 10.0.2.14 packets sent, 0% packet loss, instant responsePASSInternet Routingping -c 4 1.1.1.1ICMP replies returned with 0% packet lossPASSState PreservationVirtualBox UI SnapshotSnapshot taken & named cyber Lab1PASSProblems Encountered & SolutionsIssue: Host Resource Contention & VM Boot StallsSymptom: During initial startup, the guest VM experienced boot delays due to background Windows update tasks and temporary saved state lock files following a system reboot.Solution: Cleared residual hypervisor state logs (Discard Saved State), verified host RAM availability, and allocated a clean 4 GB RAM/2 CPU allocation to keep system responsiveness smooth.Key Learnings & TakeawaysArchitectural Network Isolation: Understood the functional difference between Standard NAT (isolated host translation) and NatNetwork (creating an isolated virtual switch where multiple attack and target VMs can interact directly while sharing single-point internet access).Network Troubleshooting: Re-enforced command-line network verification practices using ip, ping, and routing inspection tools to diagnose interface bindings systematically rather than relying on GUI indicators.Hypervisor Recovery Protocols: Learned the necessity of establishing baseline VM snapshots immediately after initial configuration to allow quick rollbacks during future exploit experiments.Tools & ResourcesHypervisor: Oracle VM VirtualBox 7.2Operating System: Kali Linux 2026.2Core Utilities: iproute2, ping, nmap, wiresharkCurriculum: NetworkWalks Cybersecurity InternshipAuthor & Project InfoAuthor: Junior SOC / Cybersecurity TraineeProgram: NetworkWalks Cybersecurity InternshipModule: Week 01 - Cybersecurity Lab Environment SetupRepository: Official Internship GitHub Workspace
-Processors      = "2 Cores"
+### Step 3: Network Adapter Binding & Internal Settings
+1. Open VM **Settings** $\rightarrow$ **Network**.
+2. Set **Adapter 1** to **Attached to: NAT Network**.
+3. Selected `NatNetwork` from the name dropdown and enabled **Promiscuous Mode: Allow VMs** for future packet sniffing capabilities across target nodes.
+
+---
+
+## Verification & Testing
+
+The environment was validated using standard network diagnostic commands inside the Kali Linux terminal:
+
+| Verification Test | Terminal Command | Expected / Verified Result | Status |
+| :--- | :--- | :--- | :--- |
+| **IP Assignment** | `ip a` | `eth0` displays valid IP `10.0.2.15/24` | **PASS** |
+| **Routing Table** | `ip route` | Default route configured via `10.0.2.1` | **PASS** |
+| **Gateway Reachability** | `ping -c 4 10.0.2.1` | 4 packets sent, 0% packet loss, instant response | **PASS** |
+| **Internet Routing** | `ping -c 4 1.1.1.1` | ICMP replies returned with 0% packet loss | **PASS** |
+| **State Preservation** | *VirtualBox UI Snapshot* | Snapshot taken & named `cyber Lab1` | **PASS** |
+
+---
+
+## Problems Encountered & Solutions
+
+* **Issue: Host Resource Contention & VM Boot Stalls**
+  * *Symptom:* During initial startup, the guest VM experienced boot delays due to background Windows update tasks and temporary saved state lock files following a system reboot.
+  * *Solution:* Cleared residual hypervisor state logs (`Discard Saved State`), verified host RAM availability, and allocated a clean 4 GB RAM/2 CPU allocation to keep system responsiveness smooth.
+
+---
+
+## Key Learnings & Takeaways
+
+* **Architectural Network Isolation:** Understood the functional difference between Standard NAT (isolated host translation) and `NatNetwork` (creating an isolated virtual switch where multiple attack and target VMs can interact directly while sharing single-point internet access).
+* **Network Troubleshooting:** Re-enforced command-line network verification practices using `ip`, `ping`, and routing inspection tools to diagnose interface bindings systematically rather than relying on GUI indicators.
+* **Hypervisor Recovery Protocols:** Learned the necessity of establishing baseline VM snapshots immediately after initial configuration to allow quick rollbacks during future exploit experiments.
+
+---
+
+## Tools & Resources
+* **Hypervisor:** Oracle VM VirtualBox 7.2
+* **Operating System:** Kali Linux 2026.2
+* **Core Utilities:** `iproute2`, `ping`, `nmap`, `wireshark`
+* **Curriculum:** NetworkWalks Cybersecurity Internship
+
+---
+
+## Author & Project Info
+
+* **Author:** Rushna Imran Junior SOC / Cybersecurity Trainee
+* **Program:** NetworkWalks Cybersecurity Internship
+* **Module:** Week 01 - Cybersecurity Lab Environment Setup
+* **Repository:** Official Internship GitHub Workspace
 Graphics_RAM    = "128 MB"
 Network_Adapter = "NAT Network (Name: NatNetwork)"
 * Controlled exploit execution and security tool testing
